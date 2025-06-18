@@ -1,0 +1,47 @@
+body {
+  background: #f2f4f7;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.user-card {
+  background: #fff;
+  width: 250px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.03);
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 2px solid #ccc;
+}
+
+.user-card h3 {
+  margin: 10px 0 8px;
+  color: #2c3e50;
+}
+
+.user-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
