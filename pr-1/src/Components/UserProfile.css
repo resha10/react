@@ -1,5 +1,5 @@
 body {
-  background: #f2f4f7;
+  background: #aac3e7;
   margin: 0;
   padding: 20px;
   font-family: 'Segoe UI', sans-serif;
@@ -13,7 +13,7 @@ body {
 }
 
 .user-card {
-  background: #fff;
+  background: #d688addf;
   width: 250px;
   padding: 16px;
   border-radius: 12px;

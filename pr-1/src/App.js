@@ -12,14 +12,6 @@ import khushal from "./assets/images-6.jpg";
 function App() {
   return (
     <div className="row">
-      <UserProfileCard 
-        UserId="5942"
-        name="Pruthvi Solanki"
-        gender="Male"
-        dob="20-05-2005"
-        address="58, Sanskar Villa Society, Surat"
-        photo={pruthvi}
-      />
 
       <UserProfileCard 
         UserId="6814"
@@ -28,6 +20,14 @@ function App() {
         dob="17-09-2006"
         address="203, Navkar Palace, Ahmedabad"
         photo={savan}
+      />
+      <UserProfileCard 
+        UserId="5942"
+        name="Pruthvi Solanki"
+        gender="Male"
+        dob="20-05-2005"
+        address="58, Sanskar Villa Society, Surat"
+        photo={pruthvi}
       />
 
       <UserProfileCard 
@@ -39,14 +39,6 @@ function App() {
         photo={heney}
       />
 
-      <UserProfileCard 
-        UserId="4351"
-        name="Resha Nakrani"
-        gender="Female"
-        dob="12-06-1999"
-        address="903, Shivanta Palace, Dubai"
-        photo={resha}
-      />
 
       <UserProfileCard 
         UserId="6000"
@@ -57,6 +49,15 @@ function App() {
         photo={vishal}
       />
 
+      <UserProfileCard 
+        UserId="4351"
+        name="Resha Nakrani"
+        gender="Female"
+        dob="12-06-1999"
+        address="903, Shivanta Palace, Dubai"
+        photo={resha}
+      />
+      
       <UserProfileCard 
         UserId="5689"
         name="Khus Vaghasiya"
