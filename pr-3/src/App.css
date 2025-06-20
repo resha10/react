@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+ Width: 100vw;
+  margin: 0;
+  padding: 0;
+ background-color: aliceblue;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
