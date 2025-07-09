@@ -251,5 +251,109 @@
   font-size: 14px;
   color:  rgb(253, 157, 62);
 }
+/* Make container padding responsive */
+@media (max-width: 1200px) {
+  .cat-container {
+    margin: 50px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cat-container {
+    margin: 30px 20px;
+  }
+
+  .img-poss a {
+    font-size: 22px;
+  }
+
+  .img-p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .post-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .post-p {
+    font-size: 13px;
+  }
+
+  .search-icon {
+    margin-left: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cat-container {
+    margin: 20px 10px;
+  }
+
+  .img-text {
+    font-size: 14px;
+  }
+
+  .img-poss a {
+    font-size: 20px;
+  }
+
+  .img-p {
+    font-size: 13px;
+  }
+
+  .banner-title {
+    font-size: 28px;
+  }
+
+  .post-sec {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .tag .badge {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .search-icon {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-poss a {
+    font-size: 18px;
+  }
+
+  .img-p {
+    font-size: 12px;
+  }
+
+  .page-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .post-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .post h6,
+  .post-p {
+    font-size: 12px;
+  }
+
+  .search-icon {
+    margin-left: 80px;
+  }
+
+  .tag-title {
+    font-size: 20px;
+  }
+}
 
 
