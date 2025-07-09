@@ -1,0 +1,255 @@
+.search-bar {
+    position: relative;
+}
+.search-icon{
+    position: absolute;
+    left: 0%;
+    margin-left: 165px;
+    margin-top: 7px;
+}
+.img-fluid{
+    width: 826px;
+    margin-bottom: 24px;
+}
+.cat-container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.img-text{
+    padding-right: 10px;
+    color: #1d1d1d;
+    font-size: 16px;
+    font-weight: 400px;
+}
+.img-comment{
+    padding: 0px 10px 0px;
+}
+.section-title
+{
+    text-align: left;
+}
+.section-ul{
+    list-style-type: none;
+}
+.section-ul {
+    color: #615f5f;
+    text-align: left;
+    padding-left: 5px;
+   
+}
+
+.section-ul li{
+    margin-bottom: 20px;
+}
+.section-ul li:hover{
+    color: orange;
+}
+.img-text{
+    padding-bottom: 5px;
+}
+.img-poss a {
+    text-decoration-line : none;
+    text-transform: uppercase;
+    color: rgb(29, 29, 29);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.img-poss a:hover{
+    color: rgb(253, 157, 62);
+}
+.img-p{
+    padding-bottom: 20px;
+    color: rgb(153, 153, 153);
+    font-size: 16px;
+    font-weight: 400;
+    line-height:24px;
+}
+.post p 
+{
+    color: #000;
+    cursor: pointer;
+}
+.post p :hover{
+    color: rgb(236, 117, 74);
+}
+.post h5{
+    margin-top: 17px;
+}
+
+.img-read{
+    text-transform: uppercase;
+    color: rgb(253, 157, 62);
+    font-size: 16px;
+    font-weight: 400;
+    line-height:24px;
+}
+.img-read:hover{
+    color: #000;
+}
+.img-1{
+    padding-bottom: 35px;
+}
+.img-2{
+    padding-bottom: 35px;
+}
+.img-hov img:hover{
+    overflow: hidden;
+    transition: ease-in-out;
+
+}
+.tag h5{
+    color: #1d1d1d;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+.cook,
+.food,
+.pell,
+.res,
+.null,
+.cooki {
+  background-color: rgb(245, 245, 251) !important;
+  color: #737171;
+   border: #424141 1px solid;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.cook:hover,
+.food:hover,
+.pell:hover,
+.res:hover,
+.null:hover,
+.cooki:hover {
+  background-color: rgb(253, 157, 62) !important;
+  color: #f2efef;
+  border: #424141 1px solid;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+
+.btn1 {
+    padding: 5px 3px;
+}
+.btn2 {
+    padding: 5px 3px;
+}
+.btn3 {
+    padding: 5px 3px;
+}
+.buttons-container {
+  padding: 20px;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #6c757d;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-btn:hover {
+  color: #151515;
+  border: #000 1px solid;
+}
+
+.page-btn.active {
+  background-color: #111;
+  color: white;
+  border-color: #111;
+}
+
+
+.post-p:hover {
+  color: rgb(253, 157, 62); 
+  cursor: pointer;          
+}
+
+.img-hov,
+.img-hov-2,
+.img-hov-3 {
+  overflow: hidden;
+  display: block; 
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img-hov img,
+.img-hov-2 img,
+.img-hov-3 img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-hov:hover img,
+.img-hov-2:hover img,
+.img-hov-3:hover img {
+  transform: scale(1.1); 
+}
+.post-p{
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.post-img{
+    height: 80px;
+    width: 80px;
+}
+.post-sec{
+    margin-bottom: 25px;
+}
+.post-sec {
+  margin-top: 1rem;
+}
+
+.post-sec {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.post-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: color 0.3s;
+  object-fit: cover;
+}
+.post-img:hover{
+    transform: scale(1.1);
+}
+.post-p {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.post-p:hover {
+  color: rgb(253, 157, 62);
+}
+
+.post h6 {
+  font-size: 14px;
+  color:  rgb(253, 157, 62);
+}
+
+
