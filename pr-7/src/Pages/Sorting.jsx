@@ -28,21 +28,23 @@ const Home = () => {
       <h2
         className="mb-4 text-center"
         style={{
-          color: "#d63384",
+          color:  "#981255ff",
           fontWeight: 700,
           fontFamily: "'Segoe UI', sans-serif",
         }}
       >
-        💕 Nykaa Products
+         Nykaa Products
       </h2>
+
       <div className="row g-4 justify-content-center">
         {productData.map((product) => (
           <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={product.id}>
+            
             <Card
               className="h-100 border-0 shadow-sm"
               style={{
                 borderRadius: "1.5rem",
-                backgroundColor: "#fff0f6",
+                backgroundColor: "#f99fc3ff",
                 transition: "all 0.3s",
               }}
             >
@@ -53,12 +55,13 @@ const Home = () => {
                 style={{
                   height: 200,
                   objectFit: "contain",
-                  backgroundColor: "#f8d7e5",
+                  backgroundColor: "#ea9abbff",
                   borderTopLeftRadius: "1.5rem",
                   borderTopRightRadius: "1.5rem",
                   padding: 24,
                 }}
               />
+
               <Card.Body className="d-flex flex-column p-3">
                 <h5
                   className="mb-1"
@@ -67,21 +70,23 @@ const Home = () => {
                   {product.productName}
                 </h5>
                 <p className="text-muted mb-2 small">{product.desc}</p>
+
                 <Badge
                   bg="light"
                   text="dark"
                   className="mb-3"
                   style={{
-                    fontSize: "0.75rem",
+                    fontSize: "15px",
                     padding: "0.4em 0.6em",
-                    backgroundColor: "#f8bbd0",
+                    backgroundColor: "#d85281ff",
                   }}
                 >
                   {product.category}
                 </Badge>
+
                 <p
                   className="mb-1"
-                  style={{ color: "#6a1b9a", fontWeight: 500 }}
+                  style={{ color: "#ed4b9fff", fontWeight: 500 }}
                 >
                   ₹{product.price}
                 </p>
@@ -95,31 +100,27 @@ const Home = () => {
                   </strong>
                 </p>
 
-                 <p className="text-secondary mb-3" style={{ fontSize: "0.85rem" }}>
-                  Delivery:{" "}
-                  <strong style={{ color: "#8e24aa" }}>
-                    {product.delivery || "Not available"}
-                  </strong>
-                </p>
-
                 <div className="mt-auto d-flex justify-content-between">
                   <Button
                     onClick={() => handleEdit(product.id)}
-                    variant="outline-dark"
+                    variant="outline-pink"
                     size="sm"
                     style={{
-                      borderRadius: "20px",
+                      borderRadius: "9px",
                       color: "#d63384",
                       borderColor: "#d63384",
+                  
                     }}
                   >
                     ✏️ Edit
                   </Button>
+
                   <Button
                     onClick={() => handleDelete(product.id)}
-                    variant="outline-danger"
+                    variant="outline-pink"
                     size="sm"
-                    style={{ borderRadius: "20px" }}
+                    style={{ borderRadius: "9px" , 
+                      borderColor: "#d63384",}}
                   >
                     🗑 Delete
                   </Button>
@@ -128,6 +129,7 @@ const Home = () => {
             </Card>
           </div>
         ))}
+
       </div>
     </Container>
   );

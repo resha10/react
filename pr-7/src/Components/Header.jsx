@@ -113,6 +113,7 @@ const NykaaHeader = () => {
           </Nav>
         </Container>
       </div>
+
     </>
   );
 };

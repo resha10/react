@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router'
 import NykaaHeader from './Components/Header';
-import Home from './Pages/Home';
+import Home from './Pages/Sorting';
 import AddProduct from './Components/AddProduct';
 import EditProduct from './Pages/EditProduct';
 

@@ -13,7 +13,6 @@ const EditProduct = () => {
     price: "",
     category: "",
     offers: "",
-    delivery: "",
     image: "",
   };
   const [inputForm, setInputForm] = useState(initialState);
@@ -42,9 +41,16 @@ const EditProduct = () => {
 
   return (
     <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh", backgroundColor: "#fce4ec" }}>
-      <Card style={{ minWidth: 400, maxWidth: 600, width: "100%", borderRadius: "2rem", boxShadow: "0 6px 20px rgba(0,0,0,0.1)", backgroundColor: "#fff0f5" }}>
+
+      <Card style={{ minWidth: 400,
+        maxWidth: 600, width: "100%", 
+        borderRadius: "2rem", 
+        boxShadow: "0 6px 20px rgba(0,0,0,0.1)", backgroundColor: "#fff0f5" }}>
         <Card.Body className="p-5">
-          <h2 className="mb-4 text-center" style={{ color: "#e91e63", fontWeight: 700 }}>🛍️ Edit Nykaa Product</h2>
+
+          <h2 className="mb-4 text-center" style={{ color: "#e91e63", fontWeight: 700 }}>
+             Edit Product</h2>
+
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-4">
               <Form.Label className="fw-bold text-secondary">Product Name</Form.Label>
@@ -53,9 +59,10 @@ const EditProduct = () => {
                 name="productName"
                 value={inputForm.productName}
                 onChange={handleChanged}
-                className="rounded-pill shadow-sm px-4 py-2"
+                className="squre-pill shadow-sm px-4 py-2"
                 required
               />
+
             </Form.Group>
             <Form.Group className="mb-4">
               <Form.Label className="fw-bold text-secondary">Description</Form.Label>
@@ -68,6 +75,7 @@ const EditProduct = () => {
                 className="rounded-4 shadow-sm px-4 py-2"
                 required
               />
+
             </Form.Group>
             <Form.Group className="mb-4">
               <Form.Label className="fw-bold text-secondary">Price</Form.Label>
@@ -76,9 +84,11 @@ const EditProduct = () => {
                 name="price"
                 value={inputForm.price}
                 onChange={handleChanged}
-                className="rounded-pill shadow-sm px-4 py-2"
+                className="squre-pill shadow-sm px-4 py-2"
                 required
               />
+
+
             </Form.Group>
             <Form.Group className="mb-4">
               <Form.Label className="fw-bold text-secondary">Category</Form.Label>
@@ -86,7 +96,7 @@ const EditProduct = () => {
                 name="category"
                 value={inputForm.category}
                 onChange={handleChanged}
-                className="rounded-pill shadow-sm px-4 py-2"
+                className="squre-pill shadow-sm px-4 py-2"
                 required
               >
                 <option value="" disabled hidden>Select Category</option>
@@ -99,6 +109,8 @@ const EditProduct = () => {
                 <option value="Mom & Baby">Mom & Baby</option>
                 <option value="Fragrance">Fragrance</option>
               </Form.Select>
+
+
             </Form.Group>
             <Form.Group className="mb-4">
               <Form.Label className="fw-bold text-secondary">Offers</Form.Label>
@@ -108,20 +120,7 @@ const EditProduct = () => {
                 name="offers"
                 value={inputForm.offers}
                 onChange={handleChanged}
-                className="rounded-pill shadow-sm px-4 py-2"
-                required
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-4">
-              <Form.Label className="fw-bold text-secondary">Delivery Estimate</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="e.g. 3-5 business days"
-                name="delivery"
-                value={inputForm.delivery}
-                onChange={handleChanged}
-                className="rounded-pill shadow-sm px-4 py-2"
+                className="squre-pill shadow-sm px-4 py-2"
                 required
               />
             </Form.Group>
@@ -133,14 +132,15 @@ const EditProduct = () => {
                 name="image"
                 value={inputForm.image}
                 onChange={handleChanged}
-                className="rounded-pill shadow-sm px-4 py-2"
+                className="squre-pill shadow-sm px-4 py-2"
                 required
               />
             </Form.Group>
+
             <Button
               type="submit"
-              className="w-100 rounded-pill text-white"
-              style={{ background: "#e91e63", border: "none", fontWeight: "bold", fontSize: "1.1rem" }}>
+              className="w-100 squre-pill text-white"
+              style={{ background: "#e86993ff", border: "none", fontWeight: "bold", fontSize: "19px" }}>
                Update Product
             </Button>
           </Form>
