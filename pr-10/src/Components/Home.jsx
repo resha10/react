@@ -59,16 +59,20 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
     if (sortField === "offer") {
       valA = parseFloat(a.offer?.match(/\d+/)?.[0] || 0);
       valB = parseFloat(b.offer?.match(/\d+/)?.[0] || 0);
-    } else if (sortField === "deliveryTime") {
+    } 
+    else if (sortField === "deliveryTime") {
       valA = parseFloat(a.deliveryTime?.match(/\d+/)?.[0] || 0);
       valB = parseFloat(b.deliveryTime?.match(/\d+/)?.[0] || 0);
-    } else if (sortField === "price") {
+    }
+    else if (sortField === "price") {
       valA = parseFloat(a.price || 0);
       valB = parseFloat(b.price || 0);
-    } else if (sortField === "unit") {
+    }
+     else if (sortField === "unit") {
       valA = parseFloat(a.unit?.match(/\d+(\.\d+)?/)?.[0] || 0);
       valB = parseFloat(b.unit?.match(/\d+(\.\d+)?/)?.[0] || 0);
-    } else {
+    }
+     else {
       valA = valA?.toString().toLowerCase();
       valB = valB?.toString().toLowerCase();
     }

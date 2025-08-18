@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": "116995",
+      "productName": "mangoss",
+      "desc": "juice",
+      "unit": "250",
+      "price": "1",
+      "category": "sauces",
+      "image": "https://cosmeticsarenas.com/wp-content/uploads/2020/12/Nykaa-Matte-To-Last-Liquid-Mini-Lipstick-Best-Nykaa-Makeup-Products.jpg",
+      "offer": "12",
+      "deliveryTime": "12"
+    },
+    {
+      "id": "736750",
+      "productName": "chips",
+      "desc": "chips",
+      "unit": "250",
+      "price": "10",
+      "category": "bakery",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.PaQN8LCBhXjCrVL70qG0XAHaEK?pid=Api&P=0&h=180",
+      "offer": "2%",
+      "deliveryTime": "10min"
+    },
+    {
+      "id": "306708",
+      "productName": "fruit juice",
+      "desc": "juice",
+      "unit": "500",
+      "price": "100",
+      "category": "drinks",
+      "image": "https://tse1.mm.bing.net/th/id/OIP.ItApxHTMLNFd35v7OlhacgHaFE?pid=Api&P=0&h=180",
+      "offer": "5%",
+      "deliveryTime": "10min"
+    },
+    {
+      "id": "473854",
+      "productName": "cold drink",
+      "desc": "drink",
+      "unit": "250",
+      "price": "50",
+      "category": "drinks",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.7f6p35_GfKXupFBQvPBPpAHaE8?pid=Api&P=0&h=180",
+      "offer": "2%",
+      "deliveryTime": "15min"
+    }
+  ]
+}
