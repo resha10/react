@@ -73,11 +73,11 @@ const EditProduct = () => {
         className="p-4 shadow-lg border-0 mx-auto"
         style={{
           maxWidth: "750px",
-          background: "linear-gradient(to right, #f0fff0, #d4fcd6)",
-          borderRadius: "16px",
+         background: "linear-gradient(to right, #b2b0eeff, #645ebdff)",          
+         borderRadius: "16px",
         }}
       >
-        <h2 className="text-center text-success fw-bold mb-4">
+        <h2 className="text-center text-light fw-bold mb-4">
           <FaEdit className="me-2 mb-1" /> Edit Product
         </h2>
         <Form onSubmit={handleSubmit}>
@@ -206,7 +206,7 @@ const EditProduct = () => {
             type="submit"
             className="w-100 fw-bold text-white"
             style={{
-              backgroundColor: "#8d65bbff",
+              backgroundColor: "#c0a0e3ff",
               border: "none",
               padding: "12px 0",
               fontSize: "17px",

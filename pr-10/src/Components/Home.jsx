@@ -23,7 +23,7 @@ const Home = ({ searchTerm = "" }) => {
   const navigate = useNavigate();
 
 
-const { products = [], loading = false } = useSelector((state) => state.product || {});
+const { products, loading = false } = useSelector((state) => state.product || {});
 
 
 
@@ -43,7 +43,7 @@ const { products = [], loading = false } = useSelector((state) => state.product 
 
 const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boolean))];
 
-  const filteredProducts = products.filter((prod) => {
+  const filteredProducts =  products.filter((prod) => {
     const matchesSearch = prod.title
       ?.toLowerCase()
       .includes(searchTerm.toLowerCase());
@@ -59,20 +59,16 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
     if (sortField === "offer") {
       valA = parseFloat(a.offer?.match(/\d+/)?.[0] || 0);
       valB = parseFloat(b.offer?.match(/\d+/)?.[0] || 0);
-    } 
-    else if (sortField === "deliveryTime") {
+    } else if (sortField === "deliveryTime") {
       valA = parseFloat(a.deliveryTime?.match(/\d+/)?.[0] || 0);
       valB = parseFloat(b.deliveryTime?.match(/\d+/)?.[0] || 0);
-    }
-    else if (sortField === "price") {
+    } else if (sortField === "price") {
       valA = parseFloat(a.price || 0);
       valB = parseFloat(b.price || 0);
-    }
-     else if (sortField === "unit") {
+    } else if (sortField === "unit") {
       valA = parseFloat(a.unit?.match(/\d+(\.\d+)?/)?.[0] || 0);
       valB = parseFloat(b.unit?.match(/\d+(\.\d+)?/)?.[0] || 0);
-    }
-     else {
+    } else {
       valA = valA?.toString().toLowerCase();
       valB = valB?.toString().toLowerCase();
     }
@@ -91,7 +87,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
 
   return (
     <Container className="mt-4">
-      <h2 className="text-center fw-bold mb-4" style={{ color: "#7665bbff" }}>
+      <h2 className="text-center fw-bold mb-4" style={{ color: "#8365bbff" }}>
         🛒 <span style={{ color: "#FFF000" }}>Blink</span>it Cart
       </h2>
 
@@ -152,11 +148,11 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
       ) : (
         <>
           <Row xs={1} sm={2} md={3} lg={4} className="g-4">
-            {paginatedProducts.map((prod) => (
+            {products.map((prod) => (
               <Col key={prod.id}>
                 <Card
-                  className="shadow-sm border border-warning h-100 position-relative p-2"
-                  style={{ backgroundColor: "#fffde7" }}
+                  className="shadow-sm border border-light h-100 position-relative p-2"
+                  style={{ background: "linear-gradient(to right, #b2b0eeff, #645ebdff)", }}
                 >
                   {prod.offer && (
                     <div
@@ -164,6 +160,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
                       style={{
                         fontSize: "0.75rem",
                         borderBottomRightRadius: "0.5rem",
+                      
                       }}
                     >
                       {prod.offer}
@@ -226,22 +223,23 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
 
                     <div className="d-grid gap-2">
                       <Button
-                        variant="outline-success"
+                        variant="outline-light"
                         size="sm"
                         className="w-100 fw-bold"
-                        style={{ borderRadius: "0.5rem" }}
+                        style={{ borderRadius: "25px",
+                         }}
                         onClick={() => handleEdit(prod.id)}
                       >
-                        ✏️Edit
+                        Edit
                       </Button>
                       <Button
-                        variant="outline-danger"
+                        variant="outline-light"
                         size="sm"
                         className="w-100 fw-bold"
-                        style={{ borderRadius: "0.5rem" }}
+                        style={{ borderRadius: "25px" }}
                         onClick={() => handleDelete(prod.id)}
                       >
-                        🗑️Delete
+                        Delete
                       </Button>
                     </div>
                   </Card.Body>
@@ -249,22 +247,6 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
               </Col>
             ))}
           </Row>
-
-        {totalPages > 1 && (
-            <div className="d-flex justify-content-center mt-4">
-              <Pagination>
-                {Array.from({ length: totalPages }, (_, i) => (
-                  <Pagination.Item
-                    key={i + 1}
-                    active={i + 1 === currentPage}
-                    onClick={() => setCurrentPage(i + 1)}
-                  >
-                    {i + 1}
-                  </Pagination.Item>
-                ))}
-              </Pagination>
-            </div>
-          )}
         </>
       )}
     </Container>

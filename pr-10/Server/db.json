@@ -2,12 +2,12 @@
   "products": [
     {
       "id": "116995",
-      "productName": "mangoss",
-      "desc": "juice",
+      "title": "pet food",
+      "desc": "pet food",
+      "price": "1000",
+      "category": "pet",
+      "image": "https://tse3.mm.bing.net/th/id/OIP.8TTD70YWU-VBCQkO4wVOkAHaDt?pid=Api&P=0&h=180",
       "unit": "250",
-      "price": "1",
-      "category": "sauces",
-      "image": "https://cosmeticsarenas.com/wp-content/uploads/2020/12/Nykaa-Matte-To-Last-Liquid-Mini-Lipstick-Best-Nykaa-Makeup-Products.jpg",
       "offer": "12",
       "deliveryTime": "12"
     },
@@ -43,6 +43,28 @@
       "image": "https://tse4.mm.bing.net/th/id/OIP.7f6p35_GfKXupFBQvPBPpAHaE8?pid=Api&P=0&h=180",
       "offer": "2%",
       "deliveryTime": "15min"
+    },
+    {
+      "id": "440906",
+      "productName": "ots",
+      "desc": "healthy food",
+      "unit": "250gm",
+      "price": "100",
+      "category": "organic",
+      "image": "https://tse2.mm.bing.net/th/id/OIP.JsQTw2PfVvT8WgNaAJ4crQHaHa?pid=Api&P=0&h=180",
+      "offer": "12%",
+      "deliveryTime": "12min"
+    },
+    {
+      "id": "361728",
+      "productName": "mangoss",
+      "desc": "fruits",
+      "unit": "500gm",
+      "price": "100",
+      "category": "fruits",
+      "image": "https://static.toiimg.com/photo/69185542.cms",
+      "offer": "12%",
+      "deliveryTime": "12min"
     }
   ]
 }
