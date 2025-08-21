@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "116995",
+      "title": "pet food",
+      "desc": "pet food",
+      "price": "1000",
+      "category": "pet",
+      "image": "https://tse3.mm.bing.net/th/id/OIP.8TTD70YWU-VBCQkO4wVOkAHaDt?pid=Api&P=0&h=180",
+      "unit": "250",
+      "offer": "12",
+      "deliveryTime": "12"
+    },
+    {
+      "id": "736750",
+      "productName": "chips",
+      "desc": "chips",
+      "unit": "250",
+      "price": "10",
+      "category": "bakery",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.PaQN8LCBhXjCrVL70qG0XAHaEK?pid=Api&P=0&h=180",
+      "offer": "2%",
+      "deliveryTime": "10min"
+    },
+    {
+      "id": "306708",
+      "productName": "fruit juice",
+      "desc": "juice",
+      "unit": "500",
+      "price": "100",
+      "category": "drinks",
+      "image": "https://tse1.mm.bing.net/th/id/OIP.ItApxHTMLNFd35v7OlhacgHaFE?pid=Api&P=0&h=180",
+      "offer": "5%",
+      "deliveryTime": "10min"
+    },
+    {
+      "id": "473854",
+      "productName": "cold drink",
+      "desc": "drink",
+      "unit": "250",
+      "price": "50",
+      "category": "drinks",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.7f6p35_GfKXupFBQvPBPpAHaE8?pid=Api&P=0&h=180",
+      "offer": "2%",
+      "deliveryTime": "15min"
+    },
+    {
+      "id": "440906",
+      "productName": "ots",
+      "desc": "healthy food",
+      "unit": "250gm",
+      "price": "100",
+      "category": "organic",
+      "image": "https://tse2.mm.bing.net/th/id/OIP.JsQTw2PfVvT8WgNaAJ4crQHaHa?pid=Api&P=0&h=180",
+      "offer": "12%",
+      "deliveryTime": "12min"
+    },
+    {
+      "id": "361728",
+      "productName": "mangoss",
+      "desc": "fruits",
+      "unit": "500gm",
+      "price": "100",
+      "category": "fruits",
+      "image": "https://static.toiimg.com/photo/69185542.cms",
+      "offer": "12%",
+      "deliveryTime": "12min"
+    }
+  ]
+}
