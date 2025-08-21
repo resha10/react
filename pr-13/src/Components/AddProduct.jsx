@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import generateUniqueId from "generate-unique-id";
 import { useDispatch } from "react-redux";
 import { addProductAsync } from "../Services/Actions/productAction";
-import { uploadImage } from "../Services/imageUpload";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
@@ -28,16 +27,6 @@ const AddProduct = () => {
     const { name, value } = e.target;
     setInputForm({ ...inputForm, [name]: value });
   };
-
-    const handleFileChanged = async (e) => {
-    // console.log(e.target.files[0]);
-    let imagePath = await uploadImage(e.target.files[0]);
-
-    setInputForm({
-      ...inputForm,
-      image: imagePath,
-    });
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -163,12 +152,12 @@ const AddProduct = () => {
             <Col md={12} className="mb-3">
               <Form.Label className="fw-semibold">Image URL</Form.Label>
               <Form.Control
-                type="file"
+                type="text"
                 name="image"
                 placeholder="Paste a valid image URL"
-                // value={inputForm.image}
-                onChange={handleFileChanged}
-                // required
+                value={inputForm.image}
+                onChange={handleChanged}
+                required
               />
             </Col>
           </Row>
