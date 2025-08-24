@@ -134,7 +134,7 @@ const BlinkitHeader = ({ onSearch }) => {
               <>
                 <span className="fw-semibold text-dark">{user.email}</span>
                 <Button 
-                  variant="outline-primary"
+                  variant="outline-danger"
                   onClick={handleLogOut}
                   style={{ fontWeight: "600", padding: "6px 16px", height: "42px" }}
                 >

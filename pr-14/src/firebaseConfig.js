@@ -1,0 +1,52 @@
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getFirestore } from 'firebase/firestore';
+// import { getAuth } from "firebase/auth";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBJL14YNi32CHuQfmR5FczFljAvEl1haQU",
+//   authDomain: "blinkit-api-11-5a8fc.firebaseapp.com",
+//   projectId: "blinkit-api-11-5a8fc",
+//   storageBucket: "blinkit-api-11-5a8fc.firebasestorage.app",
+//   messagingSenderId: "237415737370",
+//   appId: "1:237415737370:web:c77242cadeb45e12d209a3"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// export const db = getFirestore(app);
+// export const auth = getAuth(app);
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+// import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDfJVF44jv4BpNl0NHxtz7YIomBKiVdKCk",
+  authDomain: "blinkit-f2c1b.firebaseapp.com",
+  projectId: "blinkit-f2c1b",
+  storageBucket: "blinkit-f2c1b.firebasestorage.app",
+  messagingSenderId: "799947760111",
+  appId: "1:799947760111:web:4af3b460c822d7756bd61a",
+  measurementId: "G-QC4FMBFLE4"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const auth = getAuth(app);
+
+
+
+

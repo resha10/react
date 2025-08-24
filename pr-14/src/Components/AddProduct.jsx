@@ -196,7 +196,7 @@ const AddProduct = () => {
                 letterSpacing: "1px",
               }}
             >
-              Add Product
+              ➕ Add Product
             </Button>
           </div>
         </Form>

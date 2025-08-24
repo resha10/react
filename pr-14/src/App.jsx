@@ -5,8 +5,8 @@ import BlinkitHeader from './Components/Header';
 import AddProduct from './Components/AddProduct';
 import EditProduct from './Components/EditProduct';
 import Home from './Components/Home';
-import Signin from "./Components/Authentication/Signin";
-import Signup from "./Components/Authentication/Signup";
+import SignIn from "./Components/Authentication/SignIn";
+import SignUp from './Components/Authentication/Signup';
 
 function App() {
    const [searchTerm, setSearchTerm] = useState("")
@@ -18,9 +18,9 @@ function App() {
         <Route path="/" element={<Home searchTerm={searchTerm} />} />
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
-        <Route path="*" element={<h2>404 Page Not Found</h2>} />
-        <Route path="/signIn" element={<Signin />} />
-        <Route path="/signUp" element={<Signup/>} />
+        {/* <Route path="*" element={<h2>404 Page Not Found</h2>} /> */}
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
     </>
   )

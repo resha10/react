@@ -189,9 +189,8 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
                   )}
 
                   <div
-                    className="d-flex justify-content-center align-items-center "
-                    style={{ height: "130px",background: "linear-gradient(90deg, #c6bcffff, #9681dbff)",
- }}
+                    className="d-flex justify-content-center align-items-center bg-white"
+                    style={{ height: "130px" }}
                   >
                     <Card.Img
                       variant="top"
@@ -204,13 +203,12 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
                     />
                   </div>
 
-                  <Card.Body className="p-2 d-flex flex-column"
-                    style={{background: "linear-gradient(90deg, #c6bcffff, #9681dbff)",color:"white"}}>
+                  <Card.Body className="p-2 d-flex flex-column">
                        <Card.Title className="fs-6 fw-semibold mb-1">
                       {prod.title}
                     </Card.Title>
                     <div className="text-muted small d-flex align-items-center mb-1">
-                      <Badge bg="dark" text="ligt">
+                      <Badge bg="light" text="dark">
                         <FaClock className="me-1" size={12} />
                         <span style={{ fontSize: "0.75rem" }}>
                           {prod.deliveryTime || "15 MINS"}
@@ -230,7 +228,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
                     </div>
 
                     <Badge
-                      bg="primary"
+                      bg="warning"
                       text="dark"
                       className="mb-3"
                       style={{ width: "fit-content" }}
@@ -252,7 +250,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
                         size="sm"
                         onClick={() => setViewProduct(prod)}
                       >
-                         View
+                        👁 View
                       </Button>
 
                     
@@ -263,7 +261,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
                         style={{ borderRadius: "0.5rem" }}
                         onClick={() => handleEdit(prod.id)}
                       >
-                        Edit
+                        ✏️Edit
                       </Button>
                       <Button
                         variant="outline-danger"
@@ -272,7 +270,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
                         style={{ borderRadius: "0.5rem" }}
                         onClick={() => handleDelete(prod.id)}
                       >
-                        Delete
+                        🗑️Delete
                       </Button>
                     </div>
                   </Card.Body>
@@ -311,7 +309,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
       <Modal.Header
         closeButton
         style={{
-          background: "linear-gradient(90deg, #6a11cb 0%, #a189f7ff 100%)",
+          background: "linear-gradient(90deg, #6a11cb 0%, #2575fc 100%)",
           color: "#fff",
           textAlign: "center",
           justifyContent: "center",
@@ -329,7 +327,7 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
       <Modal.Body className="text-center p-4">
         <div
           style={{
-            backgroundColor: "#74ade5ff",
+            backgroundColor: "#f8f9fa",
             padding: "20px",
             borderRadius: "12px",
             boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
@@ -367,11 +365,11 @@ const categories = ["All", ...new Set(products.map((p) => p.category).filter(Boo
           borderTop: "none",
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "#6c9eeaff",
+          backgroundColor: "#f1f3f6",
         }}
       >
         <Button
-          variant="outline-primary"
+          variant="outline-danger"
           onClick={() => setViewProduct(null)}
           style={{ borderRadius: "8px", padding: "8px 20px" }}
         >

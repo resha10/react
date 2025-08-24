@@ -214,7 +214,7 @@ const EditProduct = () => {
             type="submit"
             className="w-100 fw-bold text-white"
             style={{
-              backgroundColor: "#6053e6ff",
+              backgroundColor: "#00a82d",
               border: "none",
               padding: "12px 0",
               fontSize: "17px",
@@ -223,11 +223,11 @@ const EditProduct = () => {
               transition: "all 0.3s ease-in-out",
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = "#641cc9ff";
+              e.target.style.backgroundColor = "#1cc954";
               e.target.style.transform = "scale(1.02)";
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = "#641cc9ff";
+              e.target.style.backgroundColor = "#00a82d";
               e.target.style.transform = "scale(1)";
             }}
           >
