@@ -91,34 +91,26 @@
 // }
 
 // export default App;
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import PostList from "./Components/PostList";
+import BlogAdd from "./Components/BlogAdd";
+import BlogEdit from "./Components/BlogEdit";
 
-
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import PostList from './Components/PostList';
-import PostForm from './Components/PostForm';
-import PostDetails from './Components/PostDetails';
-import PrivateRoute from './Components/PrivateRoute';
-import Login from './Components/Auth/Login';
-
-export default function App() {
+function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<PostList />} />
-        <Route path="/post/:id" element={<PostDetails />} />
-        <Route path="/login" element={<Login />} />
-
-        {/* Protected */}
-        <Route element={<PrivateRoute />}>
-          <Route path="/add" element={<PostForm />} />
-          <Route path="/edit/:id" element={<PostForm />} />
-        </Route>
-
-        <Route path="*" element={<div className="container p-4">Not Found</div>} />
-      </Routes>
-    </>
+      <div className="container mt-4">
+        <Routes>
+          <Route path="/" element={<PostList />} />
+          <Route path="/add" element={<BlogAdd />} />
+          <Route path="/Edit" element={<BlogEdit />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
+export default App;

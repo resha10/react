@@ -1,128 +1,180 @@
-// import { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 // import { useDispatch, useSelector } from "react-redux";
-// import { fetchPosts, updatePost, deletePost } from "../Services/Actions/postAction.js";
-// import { Row, Col, Card, Button, Form } from "react-bootstrap";
-
+// import { fetchPosts, deletePost, updatePost } from "../Services/Actions/postAction";
+// import { Table, Button, Modal, Form } from "react-bootstrap";
 
 // function ManagePosts() {
 //   const dispatch = useDispatch();
-//   const posts = useSelector((state) => state.posts.posts);
-
-//   const [editingPost, setEditingPost] = useState(null);
+//   const posts = useSelector((state) => state.posts);
+//   const [show, setShow] = useState(false);
+//   const [editData, setEditData] = useState({ id: "", title: "", content: "" });
 
 //   useEffect(() => {
 //     dispatch(fetchPosts());
 //   }, [dispatch]);
 
-//   const handleEditClick = (post) => {
-//     setEditingPost(post);
-//   };
-
-//   const handleChange = (e) => {
-//     setEditingPost({ ...editingPost, [e.target.name]: e.target.value });
-//   };
-
-//   const handleUpdate = (e) => {
-//     e.preventDefault();
-//     dispatch(updatePost(editingPost.id, editingPost));
-//     setEditingPost(null);
-//   };
-
 //   const handleDelete = (id) => {
-//     if (window.confirm("Are you sure you want to delete this post?")) {
-//       dispatch(deletePost(id));
-//     }
+//     dispatch(deletePost(id));
+//   };
+
+//   const handleEditClick = (post) => {
+//     setEditData(post);
+//     setShow(true);
+//   };
+
+//   const handleUpdate = () => {
+//     dispatch(updatePost(editData.id, { title: editData.title, content: editData.content }));
+//     setShow(false);
 //   };
 
 //   return (
 //     <div className="container mt-4">
-//       <h3>Manage Posts</h3>
-//       <Row>
-//         {posts.map((p) => (
-//           <Col md={6} key={p.id} className="mb-3">
-//             <Card>
-//               <Card.Img variant="top" src={p.image} height={150} />
-//               <Card.Body>
-//                 {editingPost && editingPost.id === p.id ? (
-//                   <Form onSubmit={handleUpdate}>
-//                     <Form.Group className="mb-2">
-//                       <Form.Control
-//                         name="title"
-//                         value={editingPost.title}
-//                         onChange={handleChange}
-//                       />
-//                     </Form.Group>
-//                     <Form.Group className="mb-2">
-//                       <Form.Control
-//                         name="description"
-//                         value={editingPost.description}
-//                         onChange={handleChange}
-//                       />
-//                     </Form.Group>
-//                     <Form.Group className="mb-2">
-//                       <Form.Control
-//                         type="date"
-//                         name="date"
-//                         value={editingPost.date}
-//                         onChange={handleChange}
-//                       />
-//                     </Form.Group>
-//                     <Form.Group className="mb-2">
-//                       <Form.Control
-//                         name="image"
-//                         value={editingPost.image}
-//                         onChange={handleChange}
-//                       />
-//                     </Form.Group>
-//                     <Form.Group className="mb-2">
-//                       <Form.Control
-//                         name="category"
-//                         value={editingPost.category}
-//                         onChange={handleChange}
-//                       />
-//                     </Form.Group>
-//                     <Button type="submit" size="sm" variant="warning">
-//                       Update
-//                     </Button>{" "}
-//                     <Button
-//                       size="sm"
-//                       variant="secondary"
-//                       onClick={() => setEditingPost(null)}
-//                     >
-//                       Cancel
-//                     </Button>
-//                   </Form>
-//                 ) : (
-//                   <>
-//                     <Card.Title>{p.title}</Card.Title>
-//                     <Card.Text>{p.description}</Card.Text>
-//                     <Card.Text>
-//                       <small>{p.date} | {p.category}</small>
-//                     </Card.Text>
-//                     <Button
-//                       variant="warning"
-//                       size="sm"
-//                       className="me-2"
-//                       onClick={() => handleEditClick(p)}
-//                     >
-//                       Edit
-//                     </Button>
-//                     <Button
-//                       variant="danger"
-//                       size="sm"
-//                       onClick={() => handleDelete(p.id)}
-//                     >
-//                       Delete
-//                     </Button>
-//                   </>
-//                 )}
-//               </Card.Body>
-//             </Card>
-//           </Col>
-//         // ))}
-//       </Row>
+//       <h2>Manage Posts</h2>
+//       <Table bordered hover>
+//         <thead>
+//           <tr>
+//             <th>Title</th>
+//             <th>Content</th>
+//             <th>Actions</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {posts.map((post) => (
+//             <tr key={post.id}>
+//               <td>{post.title}</td>
+//               <td>{post.content}</td>
+//               <td>
+//                 <Button variant="warning" className="me-2" onClick={() => handleEditClick(post)}>
+//                   Edit
+//                 </Button>
+//                 <Button variant="danger" onClick={() => handleDelete(post.id)}>
+//                   Delete
+//                 </Button>
+//               </td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </Table>
+
+//       {/* Edit Modal */}
+//       <Modal show={show} onHide={() => setShow(false)}>
+//         <Modal.Header closeButton>
+//           <Modal.Title>Edit Post</Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           <Form>
+//             <Form.Group className="mb-3">
+//               <Form.Label>Title</Form.Label>
+//               <Form.Control
+//                 type="text"
+//                 value={editData.title}
+//                 onChange={(e) => setEditData({ ...editData, title: e.target.value })}
+//               />
+//             </Form.Group>
+//             <Form.Group className="mb-3">
+//               <Form.Label>Content</Form.Label>
+//               <Form.Control
+//                 as="textarea"
+//                 rows={3}
+//                 value={editData.content}
+//                 onChange={(e) => setEditData({ ...editData, content: e.target.value })}
+//               />
+//             </Form.Group>
+//           </Form>
+//         </Modal.Body>
+//         <Modal.Footer>
+//           <Button variant="secondary" onClick={() => setShow(false)}>
+//             Cancel
+//           </Button>
+//           <Button variant="primary" onClick={handleUpdate}>
+//             Update
+//           </Button>
+//         </Modal.Footer>
+//       </Modal>
 //     </div>
 //   );
 // }
 
 // export default ManagePosts;
+
+
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchPosts, updatePost, deletePost } from "../Services/Actions/postAction";
+import { Table, Button, Form } from "react-bootstrap";
+
+function EditDeletePost() {
+  const dispatch = useDispatch();
+  const { posts } = useSelector((state) => state.posts);
+  const [editId, setEditId] = useState(null);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    dispatch(fetchPosts());
+  }, [dispatch]);
+
+  const handleEdit = (post) => {
+    setEditId(post.id);
+    setTitle(post.title);
+    setContent(post.content);
+  };
+
+  const handleUpdate = () => {
+    dispatch(updatePost({ id: editId, title, content }));
+    setEditId(null);
+    setTitle("");
+    setContent("");
+  };
+
+  return (
+    <>
+      <h3>Manage Posts</h3>
+      <Table bordered hover>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {posts.map((post) => (
+            <tr key={post.id}>
+              <td>{post.title}</td>
+              <td>{post.content}</td>
+              <td>
+                <Button variant="warning" size="sm" onClick={() => handleEdit(post)}>Edit</Button>{" "}
+                <Button variant="danger" size="sm" onClick={() => dispatch(deletePost(post.id))}>Delete</Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+
+      {editId && (
+        <div>
+          <h4>Edit Post</h4>
+          <Form>
+            <Form.Group className="mb-3">
+              <Form.Label>Title</Form.Label>
+              <Form.Control value={title} onChange={(e) => setTitle(e.target.value)} />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Content</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+              />
+            </Form.Group>
+            <Button variant="primary" onClick={handleUpdate}>Update Post</Button>
+          </Form>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default EditDeletePost;

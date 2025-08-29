@@ -1,8 +1,13 @@
-import { combineReducers } from 'redux';
-import postReducer from './postReducer';
-import authReducer from './authReducer';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import store from "./store";
+import App from "./App";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default combineReducers({
-  posts: postReducer,
-  auth: authReducer
-});
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
