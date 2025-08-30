@@ -38,7 +38,7 @@ const SignIn = () => {
     <div
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(-45deg, #1d11cbff, #2575fc, #7b7ff3ff, #ee0979)",
+        background: "linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ee0979)",
         backgroundSize: "400% 400%",
         animation: "gradientMove 12s ease infinite",
         display: "flex",
@@ -105,7 +105,7 @@ const SignIn = () => {
           className="p-4 glass-card"
         >
           <h2 className="text-center fw-bold mb-2" style={{ color: "#fff" }}>
-             Welcome Back
+            🔐 Welcome Back
           </h2>
           <p className="text-center text-light mb-4" style={{ opacity: "0.85" }}>
             Sign in to continue to your dashboard

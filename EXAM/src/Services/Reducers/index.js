@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import { blogReducer } from './blogReducer';
+import { studentReducer } from './studentReducer';
 
 export const rootReducer = combineReducers({
-  student: blogReducer,
+  student: studentReducer,
 });
 
