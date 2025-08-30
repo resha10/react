@@ -40,13 +40,13 @@ const BlogView = () => {
   }
 
   if (!blog) {
-    return <p className="text-center text-danger mt-5">❌ Blog not found!</p>;
+    return <p className="text-center text-danger mt-5"> Blog not found!</p>;
   }
 
   return (
     <Container className="mt-5">
       <Card className="shadow-lg border-0 mx-auto blog-view-card">
-        {/* Blog Header with Image */}
+   
         <div className="blog-header text-center">
           {blog.image ? (
             <img
@@ -73,7 +73,7 @@ const BlogView = () => {
             </Col>
           </Row>
 
-          {/* Buttons */}
+     
           <div className="d-flex justify-content-center gap-3 mt-4">
             <Button
               variant="success"
@@ -93,72 +93,6 @@ const BlogView = () => {
         </Card.Body>
       </Card>
 
-      {/* Extra Styling */}
-      <style>{`
-        .blog-view-card {
-          max-width: 750px;
-          border-radius: 20px;
-          overflow: hidden;
-          transition: all 0.3s ease-in-out;
-          background: #fff;
-        }
-        .blog-view-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
-        }
-        .blog-header {
-          background: linear-gradient(135deg, #ff9966, #ff5e62);
-          color: white;
-          padding: 40px 20px;
-          border-bottom-left-radius: 50% 20%;
-          border-bottom-right-radius: 50% 20%;
-        }
-        .blog-image {
-          width: 150px;
-          height: 150px;
-          border-radius: 12px;
-          object-fit: cover;
-          border: 5px solid #fff;
-          box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        }
-        .placeholder-img {
-          width: 120px;
-          height: 120px;
-          border-radius: 12px;
-          background: rgba(255,255,255,0.3);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 3rem;
-          border: 5px solid #fff;
-        }
-        .blog-title {
-          font-size: 1.8rem;
-          font-weight: bold;
-        }
-        .blog-author {
-          font-size: 1rem;
-          color: rgba(255,255,255,0.85);
-        }
-        .info-row {
-          margin-bottom: 15px;
-        }
-        .blog-content {
-          font-size: 1.05rem;
-          color: #333;
-          line-height: 1.6;
-          white-space: pre-line;
-        }
-        .action-btn {
-          padding: 10px 20px;
-          border-radius: 12px;
-          font-weight: 500;
-          transition: 0.3s;
-        }
-        .action-btn:hover {
-          transform: translateY(-2px);
-        }
-      `}</style>
     </Container>
   );
 };

@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import {
-//   deleteBlogAsync,
-//   getAllBlogAsync,
-// } from "../Services/Actions/blogAction";
-import { getAllBlogAsync } from "../Services/Actions/blogAction";
-
+import {
+  deleteBlogAsync,
+  getAllBlogAsync,
+} from "../Services/Actions/blogAction";
 
 import {
   Button,
@@ -69,10 +67,10 @@ const BlogHome = ({ searchTerm = "" }) => {
   return (
     <Container className="mt-5">
       <h2 className="text-center fw-bold mb-5 gradient-heading">
-        📝 Blog Dashboard
+         Blog Dashboard
       </h2>
 
-      {/* Sorting Filters */}
+    
       <Row className="mb-5">
         <Col md={6}>
           <Form.Group>
@@ -104,7 +102,7 @@ const BlogHome = ({ searchTerm = "" }) => {
         </Col>
       </Row>
 
-      {/* Blog Cards */}
+     
       {loading ? (
         <div className="text-center">
           <Spinner animation="border" variant="primary" />
@@ -129,7 +127,7 @@ const BlogHome = ({ searchTerm = "" }) => {
                     />
                   </div>
 
-                  {/* Card Header */}
+                
                   <Card.Header
                     className="text-white fw-bold text-center fs-5"
                     style={{
@@ -137,7 +135,7 @@ const BlogHome = ({ searchTerm = "" }) => {
                         [
                           "#6a11cb, #2575fc",
                           "#11998e, #38ef7d",
-                          "#ff6a00, #ee0979",
+                          "#6249c8ff, #ee0979",
                           "#00c6ff, #0072ff",
                         ][index % 4]
                       })`,
@@ -147,25 +145,27 @@ const BlogHome = ({ searchTerm = "" }) => {
                     {blog.title}
                   </Card.Header>
 
-                  {/* Card Body */}
+             
                   <Card.Body className="d-flex flex-column p-4">
                     <Card.Text className="mb-2">
                       ✍ <strong>Author:</strong>{" "}
                       <span className="text-muted">{blog.author || "Unknown"}</span>
                     </Card.Text>
+
                     <Card.Text className="mb-2">
                       📂 <strong>Category:</strong>{" "}
                       <span className="text-muted">{blog.category || "General"}</span>
                     </Card.Text>
+
                     <Card.Text className="mb-2">
                       📅 <strong>Date:</strong>{" "}
                       <span className="text-muted">{blog.date || "N/A"}</span>
                     </Card.Text>
+                    
                     <Card.Text className="mb-3">
                       {blog.excerpt || blog.content?.substring(0, 100) + "..."}
                     </Card.Text>
 
-                    {/* Buttons */}
                     <div className="d-flex justify-content-between mt-auto gap-2">
                       <Button
                         variant="outline-info"
@@ -198,7 +198,7 @@ const BlogHome = ({ searchTerm = "" }) => {
             ))}
           </Row>
 
-          {/* Pagination */}
+       
           {totalPages > 1 && (
             <div className="d-flex justify-content-center mt-5">
               <Pagination className="shadow-sm rounded-pill">
@@ -216,43 +216,6 @@ const BlogHome = ({ searchTerm = "" }) => {
           )}
         </>
       )}
-
-      {/* Extra Styling
-      <style>{`
-        .gradient-heading {
-          font-size: 2.5rem;
-          background: linear-gradient(90deg, #ff6a00, #ee0979);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-        }
-
-        .glass-card {
-          border-radius: 20px;
-          backdrop-filter: blur(12px);
-          background: rgba(255, 255, 255, 0.8);
-          transition: all 0.3s ease-in-out;
-        }
-        .glass-card:hover {
-          transform: translateY(-8px) scale(1.03);
-          box-shadow: 0px 12px 30px rgba(0,0,0,0.25);
-        }
-
-        .image-wrapper {
-          overflow: hidden;
-          border-radius: 20px 20px 0 0;
-        }
-        .image-wrapper img {
-          height: 200px;
-          width: 100%;
-          object-fit: cover;
-          transition: transform 0.4s ease;
-        }
-        .image-wrapper img:hover {
-          transform: scale(1.1);
-        }
-      `}</style> */}
     </Container>
   );
 };
