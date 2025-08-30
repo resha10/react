@@ -18,8 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<BlogHome searchTerm={searchTerm} />} />
         <Route path="/add-blog" element={<BlogAdd />} />
-        <Route path="/edit-blog/:id" element={<BlogEdit />} />
-        <Route path="/blogs/view/:id" element={<BlogView />} />
+        <Route path="/edit-blog" element={<BlogEdit />} />
+        <Route path="/blogs/view" element={<BlogView />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         {/* <Route path="*" element={<h2>404 Page Not Found</h2>} /> */}
