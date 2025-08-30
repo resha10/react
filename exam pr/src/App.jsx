@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import BlogHeader from './Components/BlogHeader';
+// import BlogHeader from './Components/BlogHeader';
 import BlogAdd from './Components/BlogAdd';
 import BlogEdit from './Components/BlogEdit';
 import BlogHome from './Components/BlogHome';
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Router>
-      <BlogHeader onSearch={setSearchTerm} />
+      {/* <BlogHeader onSearch={setSearchTerm} /> */}
       <Routes>
         <Route path="/" element={<BlogHome searchTerm={searchTerm} />} />
         <Route path="/add-blog" element={<BlogAdd />} />
